@@ -29,12 +29,12 @@ Management suspects that unauthorized RDP connection attempts are being made aga
 1. Noticed 15 failed login attempts from external IP `178.62.XXX.XXX` within 5 minutes.
 2. Observed 1 successful RDP login from the same IP immediately after multiple failures.
 3. Login occurred outside of business hours (03:47 AM local time).
-4. Account used: **testadmin**.
+4. Account used: **Juser1**.
 
 ---
 
 ## Summary
-Suspicious RDP activity was confirmed on Azure Windows 10 VM **AZ-VM-01**.  
+Suspicious RDP activity was confirmed on Azure Windows 10 VM **JRSvm1**.  
 A foreign IP address outside expected business regions performed multiple failed login attempts followed by a successful login using an administrative account during non-business hours.
 
 ---
