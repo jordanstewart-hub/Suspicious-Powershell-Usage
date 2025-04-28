@@ -4,10 +4,9 @@
 
 ---
 
-## 📚 Example Scenario:
+## Example Scenario:
 Management suspects that unauthorized RDP connection attempts are being made against Windows 10 VMs hosted in Azure.  
-Recent security event logs indicate an increased number of failed login attempts, and there are concerns about possible brute-force attacks targeting these systems.  
-The goal is to detect unauthorized RDP access attempts, identify suspicious behavior, and recommend mitigations.
+Recent security event logs indicate an increased number of failed login attempts, and there are concerns about possible brute-force attacks targeting these systems. The goal is to detect unauthorized RDP access attempts, identify suspicious behavior, and recommend mitigations.
 
 ---
 
@@ -18,7 +17,7 @@ The goal is to detect unauthorized RDP access attempts, identify suspicious beha
 
 ---
 
-## 🛠️ Steps Taken
+## Steps Taken
 1. Deployed Azure Monitor Agent on all Windows 10 VMs.
 2. Collected Security Events into Log Analytics Workspace.
 3. Ran Kusto Query Language (KQL) queries to detect failed and successful RDP attempts.
@@ -35,7 +34,7 @@ The goal is to detect unauthorized RDP access attempts, identify suspicious beha
 
 ---
 
-## 📝 Summary
+## Summary
 Suspicious RDP activity was confirmed on Azure Windows 10 VM **AZ-VM-01**.  
 A foreign IP address outside expected business regions performed multiple failed login attempts followed by a successful login using an administrative account during non-business hours.
 
