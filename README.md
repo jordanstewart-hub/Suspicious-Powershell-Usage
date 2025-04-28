@@ -5,8 +5,7 @@
 ---
 
 ## Example Scenario:
-Management suspects that unauthorized RDP connection attempts are being made against Windows 10 VMs hosted in Azure.  
-Recent security event logs indicate an increased number of failed login attempts, and there are concerns about possible brute-force attacks targeting these systems. The goal is to detect unauthorized RDP access attempts, identify suspicious behavior, and recommend mitigations.
+Management suspects that unauthorized RDP connection attempts are being made against Windows 10 VMs hosted in Azure. Recent security event logs indicate an increased number of failed login attempts, and there are concerns about possible brute-force attacks targeting these systems. The goal is to detect unauthorized RDP access attempts, identify suspicious behavior, and recommend mitigations.
 
 ---
 
