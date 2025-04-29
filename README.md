@@ -26,7 +26,7 @@ Management suspects that unauthorized RDP connection attempts are being made aga
 ---
 
 ## 📅 Chronological Events
-1. Noticed 15 failed login attempts from external IP `178.62.XXX.XXX` within 5 minutes.
+1. Noticed 5 failed login attempts from external IP `178.62.XXX.XXX` within 5 minutes.
 2. Observed 1 successful RDP login from the same IP immediately after multiple failures.
 3. Login occurred outside of business hours (03:47 AM local time).
 4. Account used: **Juser1**.
