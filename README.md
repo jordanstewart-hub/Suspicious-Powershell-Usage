@@ -58,9 +58,6 @@ The incident was documented, and a PowerShell execution detection rule was tuned
 | DeviceEvents        | Tracked correlated security events, including alerts and device actions |
 
 ## 🧪 Detection Queries Used (KQL):
-kql
-Copy
-Edit
 // Detect PowerShell execution with suspicious flags
 DeviceProcessEvents
 | where FileName =~ "powershell.exe"
@@ -71,6 +68,7 @@ DeviceProcessEvents
 DeviceNetworkEvents
 | where InitiatingProcessFileName =~ "powershell.exe"
 | project Timestamp, DeviceName, InitiatingProcessAccountName, RemoteIP, RemotePort
+
 
 
 ## 👨‍💻 Created By:
