@@ -51,10 +51,11 @@ A full scan was initiated and confirmed no persistent threats.
 The incident was documented, and a PowerShell execution detection rule was tuned.
 
 ## 📊 MDE Tables Referenced:
-Table	Purpose
-DeviceProcessEvents	Detected PowerShell execution and command-line arguments
-DeviceNetworkEvents	Confirmed post-execution outbound connection
-DeviceEvents	Tracked correlated security events, including alerts and device actions
+| **Table**           | **Purpose**                                                             |
+| ------------------- | ----------------------------------------------------------------------- |
+| DeviceProcessEvents | Detected PowerShell execution and command-line arguments                |
+| DeviceNetworkEvents | Confirmed post-execution outbound connection                            |
+| DeviceEvents        | Tracked correlated security events, including alerts and device actions |
 
 ## 🧪 Detection Queries Used (KQL):
 kql
