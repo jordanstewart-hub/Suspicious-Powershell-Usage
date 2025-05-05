@@ -9,6 +9,7 @@
 Security analysts observed unusual outbound traffic on several endpoints, which prompted a hunt for signs of PowerShell misuse — a common tactic used by threat actors to bypass security controls, download payloads, or exfiltrate data. The hunt focuses on detecting potentially malicious PowerShell executions across Windows 10 endpoints.
 ---
 
+
 ## 🧭 High-Level Discovery Plan:
 1. Search for PowerShell processes with suspicious command-line arguments.
 
