@@ -3,6 +3,7 @@
 **Detection of Potential Malicious PowerShell Execution on Endpoints**
 
 ![Powershell DANGER image](https://github.com/user-attachments/assets/5bced840-cf99-4047-a897-bc9e9afee0f9)
+
 [Scenario Creation](https://github.com/jordanstewart-hub/threat-hunting-scenario-TOR/blob/main/threat-hunting-scenario-tor-event-creation.md) 
 
 ## Platforms and Languages Leveraged
