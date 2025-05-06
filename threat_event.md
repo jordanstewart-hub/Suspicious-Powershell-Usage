@@ -14,11 +14,9 @@ This command makes the system pause for 10 seconds. It's harmless for simulation
 ## 5. Result of the Action:
 There is no visible activity on screen. However, logs will capture:
 -The invocation of "powershell.exe"
+
 -The "-EncodedCommand" parameter
+
 -The use of hidden window mode (-WindowStyle Hidden)
 ## 6. Why This Simulates Threat Activity
-Real attackers often encode PowerShell commands to:
--Avoid detection by traditional logging tools.
--Hide malicious logic from basic review.
--Execute in-memory attacks (fileless malware).
-
+Real attackers often encode PowerShell commands avoid detection by traditional logging tools, hide malicious logic from basic review and execute in-memory attacks (fileless malware).
