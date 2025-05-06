@@ -6,6 +6,7 @@
 Command used: powershell.exe -NoProfile -WindowStyle Hidden -EncodedCommand UwB0AGEAcgB0AC0AUwBsAGUAZQBwACAAMQAwAA==
 ## 3. Deleted PowerShell history or cleared artifacts to evade detection.
 
+
 ## 💡Explanation of the Parameters Used:
 
 -NoProfile: Prevents PowerShell profiles from loading, making execution faster and stealthier.
