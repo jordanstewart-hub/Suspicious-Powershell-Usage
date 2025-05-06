@@ -1,4 +1,4 @@
-# 🛡️ Threat Hunt Report: Suspicious PowerShell Activity
+# 🚨 Threat Hunt Report: Suspicious PowerShell Activity
 
 **Detection of Potential Malicious PowerShell Execution on Endpoints**
 
@@ -11,7 +11,7 @@ Security analysts observed unusual outbound traffic on several endpoints, which 
 ---
 
 
-## 🧭 High-Level Discovery Plan:
+## High-Level Discovery Plan:
 1. Search for PowerShell processes with suspicious command-line arguments.
 
 2. Analyze user accounts and endpoints executing encoded or obfuscated commands.
@@ -21,7 +21,7 @@ Security analysts observed unusual outbound traffic on several endpoints, which 
 
 ---
 
-## 🔍 Steps Taken
+## Steps Taken
 1. Queried process execution logs for PowerShell usage with base64 or suspicious flags (-EncodedCommand, -nop, -w hidden, etc.).
 
 2. Analyzed command-line arguments for signs of obfuscation or URL downloads.
@@ -39,7 +39,7 @@ April 13, 2025 – User jsmith ran powershell.exe -nop -w hidden -encodedCommand
 
 April 13, 2025 – Connection made to external IP over port 443 immediately after execution.
 
-## 🧾 Summary
+## Summary
 A suspicious PowerShell script was executed with the -EncodedCommand flag, often used to obfuscate malicious activity. It was launched by a standard user and connected to an external IP. The timing and technique suggest potential malware staging or data exfiltration behavior.
 
 ## 🛠️ Response Taken
@@ -58,7 +58,7 @@ The incident was documented, and a PowerShell execution detection rule was tuned
 | DeviceNetworkEvents | Confirmed post-execution outbound connection                            |
 | DeviceEvents        | Tracked correlated security events, including alerts and device actions |
 
-## 🧪 Detection Queries Used (KQL):
+## Detection Queries Used (KQL):
 // Detect PowerShell execution with suspicious flags
 DeviceProcessEvents
 | where FileName =~ "powershell.exe"
@@ -72,7 +72,7 @@ DeviceNetworkEvents
 
 
 
-## 👨‍💻 Created By:
+## Created By:
 Author: Jordan Stewart
 
 GitHub: jordanstewart-hub
