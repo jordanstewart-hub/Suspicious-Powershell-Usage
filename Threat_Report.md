@@ -24,11 +24,11 @@ Security analysts observed unusual outbound traffic on several endpoints, which 
 ## Steps Taken
 1. Queried process execution logs for PowerShell usage with base64 or suspicious flags (-EncodedCommand, -nop, -w hidden, etc.).
 
-2. Analyzed command-line arguments for signs of obfuscation or URL downloads.
+2. Analyzed command-line arguments for signs of obfuscation.
 
-3. Mapped executed scripts to user accounts and verified with endpoint security telemetry.
+3. Monitored activity in MDE using Advanced Hunting (KQL).
 
-4. Checked network logs for correlated activity following script execution.
+4. Checked network logs for correlated activity following script execution. Verified activity was captured in DeviceProcessEvents and DeviceNetworkEvents
 
 ## 🕓 Chronological Events
 April 12, 2025 – Alert triggered by Defender for Endpoint: Unusual outbound connection.
