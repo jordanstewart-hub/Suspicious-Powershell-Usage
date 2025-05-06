@@ -36,7 +36,6 @@ Real attackers often encode PowerShell commands avoid detection by traditional l
 | **Info**      | [https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-deviceprocessevents-table](https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-deviceprocessevents-table) |
 | **Purpose**   | Detects suspicious use of PowerShell with encoded commands, hidden execution, and C2-like activity.                                                                                    |
 | **Parameter** | **Description**                                                                                                                                                                        |
-| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Name**      | DeviceNetworkEvents                                                                                                                                                                    |
 | **Info**      | [https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-devicenetworkevents-table](https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-devicenetworkevents-table) |
 | **Purpose**   | Detects PowerShell-initiated network activity to external URLs or suspicious IPs.                                                                                                      |
