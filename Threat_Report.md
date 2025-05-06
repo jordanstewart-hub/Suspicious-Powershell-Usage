@@ -53,24 +53,7 @@ A suspicious PowerShell script was executed with the -EncodedCommand flag, often
 Confirmed suspicious PowerShell execution on endpoint jrs-threathunt. The endpoint jrs-threathunt was isolated via Microsoft Defender for Endpoint.
 No signs of lateral movement or real threat beyond the simulation. The users direct manager was notified.
 
-## 📊 MDE Tables Referenced:
-| **Table**           | **Purpose**                                                             |
-| ------------------- | ----------------------------------------------------------------------- |
-| DeviceProcessEvents | Detected PowerShell execution and command-line arguments                |
-| DeviceNetworkEvents | Confirmed post-execution outbound connection                            |
-| DeviceEvents        | Tracked correlated security events, including alerts and device actions |
 
-## Detection Queries Used (KQL):
-// Detect PowerShell execution with suspicious flags
-DeviceProcessEvents
-| where FileName =~ "powershell.exe"
-| where ProcessCommandLine has_any ("-EncodedCommand", "-nop", "-w hidden")
-| project Timestamp, DeviceName, InitiatingProcessAccountName, ProcessCommandLine
-
-// Check for network activity shortly after
-DeviceNetworkEvents
-| where InitiatingProcessFileName =~ "powershell.exe"
-| project Timestamp, DeviceName, InitiatingProcessAccountName, RemoteIP, RemotePort
 
 
 
