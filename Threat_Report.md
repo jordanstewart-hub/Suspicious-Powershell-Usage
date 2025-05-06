@@ -4,7 +4,7 @@
 
 ![Powershell DANGER image](https://github.com/user-attachments/assets/5bced840-cf99-4047-a897-bc9e9afee0f9)
 
-[Scenario Creation](https://github.com/jordanstewart-hub/threat-hunting-scenario-TOR/blob/main/threat-hunting-scenario-tor-event-creation.md) 
+[Scenario Creation](https://github.com/jordanstewart-hub/Suspicious-Powershell-Usage/blob/main/threat_event.md) 
 
 ## Platforms and Languages Leveraged
 - Windows 10 Virtual Machines (Microsoft Azure)
