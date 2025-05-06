@@ -35,7 +35,7 @@ Security analysts observed unusual outbound traffic on several endpoints, which 
 
 3. Monitored activity in MDE using Advanced Hunting (KQL).
 
-4. Checked network logs for correlated activity following script execution. Verified activity was captured in DeviceProcessEvents and DeviceNetworkEvents
+4. Checked network logs for correlated activity following script execution. Verified activity was captured in "DeviceProcessEvents" and "DeviceNetworkEvents".
 
 ## 🕓 Chronological Events
 April 12, 2025 – Alert triggered by Defender for Endpoint: Unusual outbound connection.
