@@ -43,13 +43,8 @@ April 13, 2025 – Connection made to external IP over port 443 immediately afte
 A suspicious PowerShell script was executed with the -EncodedCommand flag, often used to obfuscate malicious activity. It was launched by a standard user and connected to an external IP. The timing and technique suggest potential malware staging or data exfiltration behavior.
 
 ## 🛠️ Response Taken
-The endpoint WIN10-VM01 was isolated via Microsoft Defender for Endpoint.
-
-The user's credentials were reset, and MFA was enforced.
-
-A full scan was initiated and confirmed no persistent threats.
-
-The incident was documented, and a PowerShell execution detection rule was tuned.
+Confirmed suspicious PowerShell execution on endpoint jrs-threathunt. The endpoint jrs-threathunt was isolated via Microsoft Defender for Endpoint.
+No signs of lateral movement or real threat beyond the simulation. The users direct manager was notified.
 
 ## 📊 MDE Tables Referenced:
 | **Table**           | **Purpose**                                                             |
