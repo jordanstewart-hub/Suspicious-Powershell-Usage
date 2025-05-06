@@ -54,9 +54,9 @@ DeviceNetworkEvents
 | project Timestamp, DeviceName, RemoteIP, RemotePort, RemoteUrl, InitiatingProcessCommandLine
 | order by Timestamp desc
 
-Created By:
-Author Name: Jordan Stewart
+## Created By:
+## Author Name: Jordan Stewart
 
-Author Contact: https://github.com/jordanstewart-hub
+## Author Contact: https://github.com/jordanstewart-hub
 
-Date: April 30, 2025
+## Date: April 30, 2025
