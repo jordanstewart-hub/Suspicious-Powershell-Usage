@@ -28,6 +28,8 @@ There is no visible activity on screen. However, logs will capture:
 ## Why This Simulates Threat Activity
 Real attackers often encode PowerShell commands avoid detection by traditional logging tools, hide malicious logic from basic review and execute in-memory attacks (fileless malware).
 
+## Tables Used to Detect IoCs:
+
 | **Parameter** | **Description**                                                                                                                                                                        |
 | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Name**      | DeviceProcessEvents                                                                                                                                                                    |
