@@ -1,6 +1,6 @@
 ## Threat Event (Encoded Powershell Execution)
 
-## Steps the Bad Actor Took
+## 👣Steps the Bad Actor Took
 ## 1. Open a Command Prompt or Run Terminal with Admin Rights. Ensures elevated privileges for executing PowerShell commands if needed.
 ## 2. Execute PowerShell with an Encoded Command
 Command used: powershell.exe -NoProfile -WindowStyle Hidden -EncodedCommand UwB0AGEAcgB0AC0AUwBsAGUAZQBwACAAMQAwAA==
