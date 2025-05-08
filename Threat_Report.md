@@ -40,6 +40,8 @@ DeviceProcessEvents
 | project Timestamp, DeviceName, InitiatingProcessAccountName, ProcessCommandLine
 
 ```
+![Screenshot (3)](https://github.com/user-attachments/assets/e23514e4-b82b-432c-bc8b-f8c0b47139b0)
+
 
 3. Analyzed command-line arguments for signs of obfuscation.
 
