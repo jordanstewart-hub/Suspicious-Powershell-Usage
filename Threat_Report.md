@@ -54,6 +54,8 @@ DeviceProcessEvents
 DeviceNetworkEvents
 | where InitiatingProcessFileName =~ "powershell.exe"
 | project Timestamp, DeviceName, RemoteIP, RemotePort, RemoteUrl
+```
+
 
 ![Screenshot (5)](https://github.com/user-attachments/assets/d0b336b1-a901-491f-a0ff-9d38b1aae032)
 
