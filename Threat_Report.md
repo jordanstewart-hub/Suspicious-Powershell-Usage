@@ -30,7 +30,7 @@ Security analysts observed unusual outbound traffic on several endpoints between
 
 ## Steps Taken
 ### 1. Queried process execution logs for PowerShell usage with base64 or suspicious flags (-EncodedCommand, -nop, -w hidden, etc.).
-At 09:36 AM on May 8, 2025, a PowerShell process was executed matching these criteria, indicating possible script-based execution with intent to evade detection. This activity was logged and correlated with host jrs-threathunt and user juser1 for further investigation.
+At 9:36 AM on May 8, 2025, a PowerShell process was executed matching these criteria, indicating possible script-based execution with intent to evade detection. This activity was logged and correlated with host jrs-threathunt and user juser1 for further investigation.
 
 **Query used to locate events:**
 ```kql
