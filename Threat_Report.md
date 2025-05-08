@@ -29,7 +29,7 @@ Security analysts observed unusual outbound traffic on several endpoints between
 ---
 
 ## Steps Taken
-1. Queried process execution logs for PowerShell usage with base64 or suspicious flags (-EncodedCommand, -nop, -w hidden, etc.).
+1. Queried process execution logs for PowerShell usage with base64 or suspicious flags (-EncodedCommand, -nop, -w hidden, etc.). At 09:36 AM on May 8, 2025, a PowerShell process was executed matching these criteria, indicating possible script-based execution with intent to evade detection. This activity was logged and correlated with host jrs-threathunt and user juser1 for further investigation.
 
 **Query used to locate events:**
 ```kql
@@ -43,11 +43,18 @@ DeviceProcessEvents
 ![Screenshot (3)](https://github.com/user-attachments/assets/e23514e4-b82b-432c-bc8b-f8c0b47139b0)
 
 
-3. Analyzed command-line arguments for signs of obfuscation.
+2. Analyzed command-line arguments for signs of obfuscation. The encoded command found "UwB0AGEAcgB0AC0AUwBsAGUAZQBwACAAMQAwAA==" translates to: The PowerShell command Start-Sleep 10 which pauses the script for 10 seconds then exits. It runs, waits and then quits with no visible output.
+   ![Screenshot (4)](https://github.com/user-attachments/assets/62969b1e-bbe7-4004-8a75-9bc2f80c52d1)
 
-4. Monitored activity in MDE using Advanced Hunting (KQL).
 
-5. Checked network logs for correlated activity following script execution. Verified activity was captured in "DeviceProcessEvents" and "DeviceNetworkEvents".
+3. Checked network logs for correlated activity following script execution. Verified activity was captured in "DeviceProcessEvents" and "DeviceNetworkEvents". At 9:40:20 AM on May 8, 2025, a network connection was observed from device jrs-threathunt to the external IP 23.53.11.202 over port 443 (HTTPS). The associated remote URL was www.example.com, and the event was flagged with a Low severity level in the Defender logs.
+**Query used to locate events:**
+```kql
+DeviceNetworkEvents
+| where InitiatingProcessFileName =~ "powershell.exe"
+| project Timestamp, DeviceName, RemoteIP, RemotePort, RemoteUrl
+![Screenshot (5)](https://github.com/user-attachments/assets/d0b336b1-a901-491f-a0ff-9d38b1aae032)
+
 
 ## 🕓 Chronological Events
 April 12, 2025 – Alert triggered by Defender for Endpoint: Unusual outbound connection.
