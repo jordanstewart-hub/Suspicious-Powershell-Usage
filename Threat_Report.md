@@ -64,20 +64,35 @@ DeviceNetworkEvents
 
 
 ## 🕓 Chronological Events
-April 12, 2025 – Alert triggered by Defender for Endpoint: Unusual outbound connection.
+1. Process Execution – Suspicious PowerShell Command
+Timestamp: 2025-05-08T09:36:00Z
+Event: The user "juser1" executed PowerShell with suspicious arguments on device "jrs-threathunt". The command included obfuscation indicators such as -EncodedCommand, -NoProfile, and -WindowStyle Hidden.
+Action: Suspicious PowerShell execution detected.
+Command: powershell.exe -NoProfile -WindowStyle Hidden -EncodedCommand UwB0AGEAcgB0AC0AUwBsAGUAZQBwACAAMQAwAA==
+File Path: Not explicitly logged
 
-April 13, 2025 – Identified use of PowerShell with encoded payload on WIN10-VM01.
+2. Command Decoding – Obfuscated Activity Analysis
+Timestamp: 2025-05-08T09:36:10Z (approximate)
+Event: The Base64-encoded command was decoded to Start-Sleep 10, indicating a pause behavior often used to delay execution or evade sandbox detection.
+Action: Obfuscated command identified and analyzed.
+Decoded Command: Start-Sleep 10
+Purpose: Introduces a 10-second execution delay with no visible output
 
-April 13, 2025 – User jsmith ran powershell.exe -nop -w hidden -encodedCommand....
-
-April 13, 2025 – Connection made to external IP over port 443 immediately after execution.
+3. Network Connection – Post-Execution Activity
+Timestamp: 2025-05-08T09:40:20Z
+Event: A network connection was established from device "jrs-threathunt" to external IP 23.53.11.202 over port 443 (HTTPS). The destination URL was www.example.com, and the event severity was flagged as Low in Microsoft Defender logs.
+Action: Outbound HTTPS connection detected.
+Process: powershell.exe
+Remote URL: www.example.com
+Remote IP: 23.53.11.202
+Port: 443
 
 ## Summary
 A suspicious PowerShell script was executed with the -EncodedCommand flag, often used to obfuscate malicious activity. It was launched by a standard user and connected to an external IP. The timing and technique suggest potential malware staging or data exfiltration behavior. This lab replicates a common PowerShell abuse technique seen in the wild. It highlights how even benign commands can be used with obfuscation flags to mimic adversary behavior. Using MDE's hunting features we demonstrated how to detect and analyze such activity quickly.
 
-## 🛠️ Response Taken
+## Response Taken
 Confirmed suspicious PowerShell execution on endpoint jrs-threathunt. The endpoint jrs-threathunt was isolated via Microsoft Defender for Endpoint.
-No signs of lateral movement or real threat beyond the simulation. The users direct manager was notified.
+No signs of lateral movement or real threat beyond the simulation. The user "juser1" had their direct manager notified of incident.
 
 
 
@@ -88,6 +103,6 @@ Author: Jordan Stewart
 
 GitHub: jordanstewart-hub
 
-Date: April 30, 2025
+Date: May 8th, 2025
 
 
