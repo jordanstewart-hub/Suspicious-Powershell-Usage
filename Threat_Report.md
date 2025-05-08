@@ -30,8 +30,8 @@ Security analysts observed unusual outbound traffic on several endpoints, which 
 
 ## Steps Taken
 1. Queried process execution logs for PowerShell usage with base64 or suspicious flags (-EncodedCommand, -nop, -w hidden, etc.).
-**Query used to locate events:**
 
+**Query used to locate events:**
 ```kql
 DeviceProcessEvents
 | where FileName =~ "powershell.exe"
