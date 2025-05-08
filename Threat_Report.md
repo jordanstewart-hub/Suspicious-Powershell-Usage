@@ -33,13 +33,11 @@ Security analysts observed unusual outbound traffic on several endpoints, which 
 **Query used to locate events:**
 
 ```kql
-DeviceFileEvents  
-| where DeviceName == "threat-hunt-lab"  
-| where InitiatingProcessAccountName == "employee"  
-| where FileName contains "tor"  
-| where Timestamp >= datetime(2024-11-08T22:14:48.6065231Z)  
-| order by Timestamp desc  
-| project Timestamp, DeviceName, ActionType, FileName, FolderPath, SHA256, Account = InitiatingProcessAccountName
+DeviceProcessEvents
+| where FileName =~ "powershell.exe"
+| where ProcessCommandLine has_any("-EncodedCommand", "-w hidden", "-NoProfile")
+| project Timestamp, DeviceName, InitiatingProcessAccountName, ProcessCommandLine
+
 ```
 
 3. Analyzed command-line arguments for signs of obfuscation.
