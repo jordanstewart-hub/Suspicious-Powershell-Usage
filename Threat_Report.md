@@ -50,7 +50,7 @@ The encoded command found "UwB0AGEAcgB0AC0AUwBsAGUAZQBwACAAMQAwAA==" translates 
 
 
 ### 3. Checked network logs for correlated activity following script execution.
-Verified activity was captured in "DeviceProcessEvents" and "DeviceNetworkEvents". At 9:40:20 AM on May 8, 2025, a network connection was observed from device jrs-threathunt to the external IP 23.53.11.202 over port 443 (HTTPS). The associated remote URL was www.example.com, and the event was flagged with a Low severity level in the Defender logs.
+Verified activity was captured in "DeviceProcessEvents" and "DeviceNetworkEvents". At 9:40 AM on May 8, 2025, a network connection was observed from device jrs-threathunt to the external IP 23.53.11.202 over port 443 (HTTPS). The associated remote URL was www.example.com, and the event was flagged with a Low severity level in the Defender logs.
 
 **Query used to locate events:**
 ```kql
