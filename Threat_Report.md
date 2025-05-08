@@ -30,12 +30,23 @@ Security analysts observed unusual outbound traffic on several endpoints, which 
 
 ## Steps Taken
 1. Queried process execution logs for PowerShell usage with base64 or suspicious flags (-EncodedCommand, -nop, -w hidden, etc.).
+**Query used to locate events:**
 
-2. Analyzed command-line arguments for signs of obfuscation.
+```kql
+DeviceFileEvents  
+| where DeviceName == "threat-hunt-lab"  
+| where InitiatingProcessAccountName == "employee"  
+| where FileName contains "tor"  
+| where Timestamp >= datetime(2024-11-08T22:14:48.6065231Z)  
+| order by Timestamp desc  
+| project Timestamp, DeviceName, ActionType, FileName, FolderPath, SHA256, Account = InitiatingProcessAccountName
+```
 
-3. Monitored activity in MDE using Advanced Hunting (KQL).
+3. Analyzed command-line arguments for signs of obfuscation.
 
-4. Checked network logs for correlated activity following script execution. Verified activity was captured in "DeviceProcessEvents" and "DeviceNetworkEvents".
+4. Monitored activity in MDE using Advanced Hunting (KQL).
+
+5. Checked network logs for correlated activity following script execution. Verified activity was captured in "DeviceProcessEvents" and "DeviceNetworkEvents".
 
 ## 🕓 Chronological Events
 April 12, 2025 – Alert triggered by Defender for Endpoint: Unusual outbound connection.
