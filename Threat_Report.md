@@ -14,7 +14,7 @@
 
 ## 📘 Scenario Overview
 
-Security analysts observed unusual outbound traffic on several endpoints, which prompted a hunt for signs of PowerShell misuse — a common tactic used by threat actors to bypass security controls, download payloads, or exfiltrate data. The hunt focuses on detecting potentially malicious PowerShell executions across Windows 10 endpoints.
+Security analysts observed unusual outbound traffic on several endpoints between 9 AM-10:30 AM May 8th 2025 which prompted a hunt for signs of PowerShell misuse by a user in their organization — a common tactic used by threat actors to bypass security controls, download payloads, or exfiltrate data. The hunt focuses on detecting potentially malicious PowerShell executions across Windows 10 endpoints.
 ---
 
 
@@ -36,6 +36,7 @@ Security analysts observed unusual outbound traffic on several endpoints, which 
 DeviceProcessEvents
 | where FileName =~ "powershell.exe"
 | where ProcessCommandLine has_any("-EncodedCommand", "-w hidden", "-NoProfile")
+| where DeviceName == "jrs-threathunt" or InitiatingProcessAccountName == "juser1"
 | project Timestamp, DeviceName, InitiatingProcessAccountName, ProcessCommandLine
 
 ```
