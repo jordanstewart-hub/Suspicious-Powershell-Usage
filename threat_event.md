@@ -54,7 +54,7 @@ Real attackers often encode PowerShell commands avoid detection by traditional l
 | **Purpose**   | Detects PowerShell-initiated network activity to external URLs or suspicious IPs.                                                                                                      |
 
 ## Related Queries:
-
+```
 // Suspicious use of PowerShell with obfuscation
 DeviceProcessEvents
 | where FileName =~ "powershell.exe"
@@ -66,7 +66,7 @@ DeviceNetworkEvents
 | where InitiatingProcessFileName =~ "powershell.exe"
 | project Timestamp, DeviceName, RemoteIP, RemotePort, RemoteUrl, InitiatingProcessCommandLine
 | order by Timestamp desc
-
+```
 
 ## Author Name: Jordan Stewart
 
