@@ -11,6 +11,8 @@ The attacker then simulated a basic remote connection using PowerShell to mimic 
 ### 🧪 Example Command:
 ```powershell
 Invoke-WebRequest -Uri "https://www.example.com"
+```
+This command sends an outbound HTTP request, which mimics data being exfiltrated or a beaconing attempt to a command-and-control server.
 
 
 ## 💡Explanation of the Parameters Used:
