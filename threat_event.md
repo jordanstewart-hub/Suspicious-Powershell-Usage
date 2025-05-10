@@ -4,8 +4,10 @@
 ## 1. Open a Command Prompt or Run Terminal with Admin Rights. Ensures elevated privileges for executing PowerShell commands if needed.
 ## 2. Execute PowerShell with an Encoded Command
 Command used:
+```
 powershell.exe -NoProfile -WindowStyle Hidden -EncodedCommand UwB0AGEAcgB0AC0AUwBsAGUAZQBwACAAMQAwAA==
 ```
+
 
 ## 3. Deleted PowerShell history or cleared artifacts to evade detection.
 ## 4. Simulated Remote Connection Using PowerShell
